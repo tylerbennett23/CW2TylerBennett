@@ -1,0 +1,16 @@
+CREATE SCHEMA CW2;
+GO
+CREATE TABLE [CW2].[User](
+    UserID INT DEFAULT 1,
+    Email VARCHAR(255),
+    Password VARCHAR(255)
+)  
+
+INSERT INTO [CW2].[User](UserID, Email, [Password])
+    VALUES(1, 'grace@plymouth.ac.uk', 'ISAD123!');
+
+INSERT INTO [CW2].[User](UserID, Email, [Password])
+    VALUES(2, 'tim@plymouth.ac.uk', 'COMP2001!');
+
+INSERT INTO [CW2].[User](UserID, Email, [Password])
+    VALUES(3, 'ada@plymouth.ac.uk', 'insecurePassword');

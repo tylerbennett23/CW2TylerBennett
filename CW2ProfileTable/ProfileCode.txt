@@ -1,0 +1,18 @@
+CREATE SCHEMA CW2;
+GO
+CREATE TABLE [CW2].[Profile](
+    UserID INT DEFAULT 1,
+    ProfileID INT DEFAULT 1,
+    FirstName VARCHAR(255),
+    LastName  VARCHAR(255),
+    Birthday  DATE 
+)  
+
+INSERT INTO [CW2].[Profile](UserID, ProfileID,FirstName, LastName, Birthday)
+    VALUES(1, 1 , 'Grace', 'Hopper', '1995-05-01');
+
+INSERT INTO [CW2].[Profile](UserID, ProfileID,FirstName, LastName, Birthday)
+    VALUES(2, 2 , 'Tim', 'Barners-Lee', '2001-11-12');
+
+INSERT INTO [CW2].[Profile](UserID, ProfileID,FirstName, LastName, Birthday)
+    VALUES(3, 3 , 'Ada', 'Lovelace', '2004-02-29');

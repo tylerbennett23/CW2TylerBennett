@@ -1,0 +1,12 @@
+CREATE SCHEMA CW2
+GO
+
+CREATE VIEW [CW2].[CW2view]
+AS  
+    SELECT CW1Profile.FirstName,
+           CW1Profile.LastName,
+           CW1Users.Email,
+           CW1Users.Pasword
+    FROM CW1Profile
+        INNER JOIN CW1Users ON CW1Profile.ProfileID = CW1Users.UserID;
+

@@ -1,0 +1,16 @@
+CREATE SCHEMA CW2;
+GO
+CREATE TABLE [CW2].[Media](
+    MediaID INT DEFAULT 1, 
+    MediaType VARCHAR(5),
+    MediaURL VARCHAR(255)
+)  
+
+INSERT INTO [CW2].[Media](MediaID, MediaType, MediaURL)
+    VALUES(1, '.png', 'www.example.com');
+
+INSERT INTO [CW2].[Media](MediaID, MediaType, MediaURL)
+    VALUES(2, '.jpg', 'www.example.com');
+
+INSERT INTO [CW2].[Media](MediaID, MediaType, MediaURL)
+    VALUES(3, '.gif', 'www.example.com');
