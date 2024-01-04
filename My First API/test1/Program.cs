@@ -15,40 +15,38 @@ namespace test1
 {
     public class Program
     {
+       
+        public static string FinalResponse { get; private set; }
+        public static string JSONFile { get; private set; }
+
         public static void Main(string[] args)
         {
+            MakePostRequest().Wait();
+            try
+            {
+                // Call the custom method to get the FinalResponse
+                FinalResponse = MakePostRequest().Result;
+
+                // Now, you can use the 'finalResponse' string as needed
+                Console.WriteLine($"Response: {FinalResponse}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            // Add a Console.ReadLine() to keep the console window open
+           // Console.ReadLine();
+
             CreateHostBuilder(args).Build().Run();
-            _ = postAPIAsync();
+            //_ = postAPIAsync();
         }
+
+        //string FinalResponse = null;
 
         private static readonly HttpClient client = new HttpClient();
 
-
-        static async Task postAPIAsync()
-        {
-            try
-            {
-                var values = new Dictionary<string, string>
-            {
-                {"Email", "grace@plymouth.ac.uk" },
-                {"Password", "ISAD132!" }
-            };
-                var content = new FormUrlEncodedContent(values);
-
-                var response = await client.PostAsync("https://web.socem.plymouth.ac.uk/COMP2001/auth/api/users", content);
-
-                var responseString = await response.Content.ReadAsStringAsync();
-
-                 Console.WriteLine(responseString);
-
-                Debug.WriteLine(responseString);
-
-            }
-            catch
-            {
-                Console.WriteLine("Nah this aint working buddy");
-            }
-        }
+        public static object ApiHandler { get; private set; }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
@@ -57,5 +55,44 @@ namespace test1
                     webBuilder.UseStartup<Startup>();
                 });
 
+        public static async Task<string> MakePostRequest()
+        {
+            // Replace the URL with the actual endpoint you want to send the POST request to
+            string apiUrl = "https://web.socem.plymouth.ac.uk/COMP2001/auth/api/users";
+
+            // Create an instance of HttpClient
+            using (HttpClient client = new HttpClient())
+            {
+                // Prepare the data you want to send in the request body (as JSON, for example)
+                string jsonContent = "{\"email\":\"grace@plymouth.ac.uk\",\"password\":\"ISAD123!\"}";
+                JSONFile = jsonContent;
+                // Create the HttpContent with the JSON data
+                HttpContent content = new StringContent(jsonContent, System.Text.Encoding.UTF8, "application/json");
+
+                try
+                {
+                    // Send the POST request
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+                    // Check if the request was successful (status code 200-299)
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read and return the response content
+                        string responseContent = await response.Content.ReadAsStringAsync();
+                        return responseContent;
+                    }
+                    else
+                    {
+                        // Handle error cases if needed
+                        throw new HttpRequestException($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions if needed
+                    throw new HttpRequestException($"Exception: {ex.Message}");
+                }
+            }
+        }
     }
 }

@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace test1.Controllers
-{
-    [ApiController]
+namespace test1.Controllers{ 
+
+
+[ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-       
+
+        
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
@@ -25,8 +27,8 @@ namespace test1.Controllers
             //var rng = new Random();
             return Enumerable.Range(1, 1).Select(index => new WeatherForecast
             {
-                Email = "grace@plymouth.ac.uk",
-                Password = "ISAD123!",
+                Data = Program.JSONFile,
+                ResponsAPI = Program.FinalResponse
             })
             .ToArray();
         }
