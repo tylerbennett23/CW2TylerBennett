@@ -26,7 +26,7 @@ namespace test1.Controllers
             return Enumerable.Range(1, 1).Select(index => new WeatherForecast
             {
                 Email = "grace@plymouth.ac.uk",
-                Password = "ISAD123!"
+                Password = "ISAD123!",
             })
             .ToArray();
         }
