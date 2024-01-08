@@ -1,0 +1,11 @@
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\test1.exe
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\test1.dll
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\test1.deps.json
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\test1.runtimeconfig.json
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\test1.pdb
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tyler\CW2TylerBennett\My First API\test1\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
