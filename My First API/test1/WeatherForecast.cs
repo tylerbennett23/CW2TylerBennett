@@ -37,7 +37,7 @@ namespace test1
 
             }
             catch {
-                Console.WriteLine("Nah this aint working buddy");
+                Console.WriteLine("Nah this aint working buddy, it aint posting");
             }
         }
         

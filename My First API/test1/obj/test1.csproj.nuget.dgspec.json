@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tlbennett\\CW2TylerBennett\\My First API\\test1\\test1.csproj": {}
+    "C:\\Users\\tyler\\CW2TylerBennett\\My First API\\test1\\test1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tlbennett\\CW2TylerBennett\\My First API\\test1\\test1.csproj": {
+    "C:\\Users\\tyler\\CW2TylerBennett\\My First API\\test1\\test1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tlbennett\\CW2TylerBennett\\My First API\\test1\\test1.csproj",
+        "projectUniqueName": "C:\\Users\\tyler\\CW2TylerBennett\\My First API\\test1\\test1.csproj",
         "projectName": "test1",
-        "projectPath": "C:\\Users\\tlbennett\\CW2TylerBennett\\My First API\\test1\\test1.csproj",
-        "packagesPath": "C:\\Users\\tlbennett\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tlbennett\\CW2TylerBennett\\My First API\\test1\\obj\\",
+        "projectPath": "C:\\Users\\tyler\\CW2TylerBennett\\My First API\\test1\\test1.csproj",
+        "packagesPath": "C:\\Users\\tyler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tyler\\CW2TylerBennett\\My First API\\test1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tlbennett\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

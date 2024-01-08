@@ -57,7 +57,6 @@ namespace test1
                 endpoints.MapControllers();
             });
 
-             
         }
     }
 }
